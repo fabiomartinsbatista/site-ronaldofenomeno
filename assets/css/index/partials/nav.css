@@ -1,0 +1,95 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 40px;
+  left: 100px;
+  width: calc(100% - 200px);
+  height: 80px;
+  z-index: 20;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 0 40px;
+  background-color: #0000003b;
+  transition: background-color 2s;
+}
+nav.scroll {
+  background-color: #ffffff16;
+}
+nav img.logo {
+  width: 100%;
+  max-width: 160px;
+  margin: 0 10px 0 0;
+}
+nav .opcoes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+nav .opcoes a {
+  font-family: var(--light);
+  font-size: 16px;
+  color: var(--cor-branco);
+  opacity: 0.6;
+  margin: 0 0 0 20px;
+  transition: all 0.3s;
+}
+nav .opcoes a:hover {
+  opacity: 1;
+}
+nav .opcoes .destaque {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+nav .opcoes .destaque a {
+  display: flex;
+  align-items: center;
+  font-family: var(--bold);
+  opacity: 1;
+}
+nav .opcoes .destaque a:hover {
+  opacity: 0.6;
+}
+nav .opcoes .destaque a img {
+  width: 100%;
+  max-width: 15px;
+  margin: 0 10px 0 0;
+}
+nav .opcoes .destaque a.entrar {
+  padding: 0 0 0 40px;
+  margin: 0 0 0 40px;
+  border-left: 2px solid #fff;
+}
+/* Responsivo */
+@media screen and (max-width: 1000px) {
+  nav {
+    top: 20px;
+    left: 30px;
+    width: calc(100% - 60px);
+    height: 80px;
+    padding: 0 30px;
+  }
+  nav img.logo {
+    width: 100%;
+    max-width: 140px;
+    margin: 0 10px 0 0;
+  }
+  nav .opcoes a {
+    display: none;
+    margin: 0;
+  }
+  nav .opcoes .destaque a {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  nav .opcoes .destaque a img {
+    margin: 0 0 0 10px;
+  }
+  nav .opcoes .destaque a.entrar {
+    display: none;
+  }
+}
